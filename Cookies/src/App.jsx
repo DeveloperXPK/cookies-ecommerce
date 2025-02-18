@@ -4,6 +4,7 @@ import Carousel from "./components/Carousel.jsx";
 import CookieBox from "./components/CookieBox.jsx";
 import Cookies from "./components/Cookies.jsx";
 import Form from "./components/Form.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   const cookiesInfo = [
@@ -70,6 +71,7 @@ function App() {
       <section>
         <Form />
       </section>
+      <Footer />
     </>
   );
 }

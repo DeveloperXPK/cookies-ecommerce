@@ -18,7 +18,7 @@ const emailInputStyles = {
 
 export default function Form() {
   return (
-    <>
+    <div className="main-form">
       <SectionTitle />
       <FormNames />
       <div className="mb-3">
@@ -33,7 +33,9 @@ export default function Form() {
           placeholder="¡Tu correo aquí!"
         />
       </div>
-    </>
+      <Direccion />
+      <ButtonSendOrder />
+    </div>
   );
 }
 
@@ -75,6 +77,35 @@ function FormNames() {
           aria-label="Apellidos"
         />
       </div>
+    </div>
+  );
+}
+
+function Direccion() {
+  return (
+    <>
+      <div class="mb-3">
+        <label htmlFor="formGroupExampleInput" class="form-label">
+          Direccion 📨
+        </label>
+        <input
+          type="text"
+          style={emailInputStyles}
+          class="form-control"
+          id="formGroupExampleInput"
+          placeholder="¡Tu direccion aqui!"
+        />
+      </div>
+    </>
+  );
+}
+
+function ButtonSendOrder() {
+  return (
+    <div className="d-grid gap-2 col-6 mx-auto">
+      <button className="btn btn-primary" type="button">
+        ¡Termina tu pedido aqui!
+      </button>
     </div>
   );
 }

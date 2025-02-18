@@ -141,6 +141,11 @@ nav img:hover {
 .cookie-image {
   height: 15rem;
   object-fit: cover;
+  transition: ease-in-out 0.5s;
+}
+
+.cookie-image:hover {
+  transform: scale(1.1);
 }
 
 .cookie-info {
@@ -169,4 +174,33 @@ nav img:hover {
 
 .cookie-description {
   text-align: center;
+}
+
+.main-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+footer {
+  margin-top: 5rem;
+  background-color: #0068d6;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.insta-image {
+  width: 5rem;
+  object-fit: cover;
+  transition: ease-in-out 0.5s;
+}
+
+.insta-image:hover {
+  transform: scale(1.1);
 }

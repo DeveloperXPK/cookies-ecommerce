@@ -4,6 +4,18 @@ const cookiesImageStyles = {
   objectFit: "cover",
 };
 
+const buttonStyles = {
+  backgroundColor: "#007bff",
+  color: "rgb(250, 236, 223)",
+  fontFamily: "Rowdies, serif",
+  fontWeight: "bold",
+  boxSizing: "border-box",
+  borderRadius: "1rem",
+  width: "10rem",
+  borderColor: "#007bff",
+  marginTop: "0.5rem",
+};
+
 export default function CookieBox() {
   return (
     <>
@@ -20,6 +32,7 @@ export default function CookieBox() {
             style={cookiesImageStyles}
           ></img>
           <h3 className="subtitle">Caja x3</h3>
+          <AddButton />
         </div>
         <div className="boxes-container">
           <img
@@ -39,5 +52,13 @@ export default function CookieBox() {
         </div>
       </section>
     </>
+  );
+}
+
+function AddButton() {
+  return (
+    <button className="add-button" style={buttonStyles}>
+      Agregar
+    </button>
   );
 }
