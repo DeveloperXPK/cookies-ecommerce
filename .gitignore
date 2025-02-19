@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#Json and dependencies files
+package-lock.json
+package.json
+
+#Environments variables
+.env 
