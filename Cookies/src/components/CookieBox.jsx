@@ -26,7 +26,7 @@ export default function CookieBox() {
       <section className="cookiesbox">
         <div className="boxes-container">
           <img
-            src="/Krooky_Galleta.png"
+            src="/Caja x3.png"
             className="d-block w-100"
             alt="Cookies"
             style={cookiesImageStyles}
@@ -36,19 +36,23 @@ export default function CookieBox() {
         </div>
         <div className="boxes-container">
           <img
-            src=""
+            src="/Caja x6.png"
             className="d-block w-100"
             alt="Krooky Cookies"
             style={cookiesImageStyles}
           ></img>
+          <h3 className="subtitle">Caja x6</h3>
+          <AddButton />
         </div>
         <div className="boxes-container">
           <img
-            src=""
+            src="/Caja x12.png"
             className="d-block w-100"
             alt="Cookies w Milk"
             style={cookiesImageStyles}
           ></img>
+          <h3 className="subtitle">Caja x12</h3>
+          <AddButton />
         </div>
       </section>
     </>

@@ -16,6 +16,11 @@ const emailInputStyles = {
   height: "auto",
 };
 
+const buttonStyles = {
+  width: "20rem",
+  height: "auto",
+};
+
 export default function Form() {
   return (
     <div className="main-form">
@@ -84,7 +89,7 @@ function FormNames() {
 function Direccion() {
   return (
     <>
-      <div class="mb-3">
+      <div className="mb-3">
         <label htmlFor="formGroupExampleInput" class="form-label">
           Direccion 📨
         </label>
@@ -102,10 +107,55 @@ function Direccion() {
 
 function ButtonSendOrder() {
   return (
-    <div className="d-grid gap-2 col-6 mx-auto">
-      <button className="btn btn-primary" type="button">
-        ¡Termina tu pedido aqui!
+    <div>
+      <button
+        style={buttonStyles}
+        type="button"
+        className="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
+        ¡ Termina de realizar tu pedido aqui !
       </button>
+
+      <div
+        className="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="staticBackdropLabel">
+                Krooky Cookies
+              </h1>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">
+              Termina de realizar tu pedido a la linea de WhatsApp que te
+              enviamos
+            </div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

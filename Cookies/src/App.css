@@ -186,7 +186,6 @@ nav img:hover {
 
 footer {
   margin-top: 5rem;
-  background-color: #0068d6;
   color: white;
   display: flex;
   justify-content: center;
@@ -199,6 +198,7 @@ footer {
   width: 5rem;
   object-fit: cover;
   transition: ease-in-out 0.5s;
+  margin-bottom: 1rem;
 }
 
 .insta-image:hover {
