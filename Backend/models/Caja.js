@@ -6,4 +6,4 @@ const CajaSchema = new mongoose.Schema({
   precio: { type: Number, required: true },
 });
 
-module.exports = mongoose.Model("Caja", CajaSchema);
+module.exports = mongoose.model("Caja", CajaSchema);

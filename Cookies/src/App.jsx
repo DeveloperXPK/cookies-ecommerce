@@ -5,8 +5,19 @@ import CookieBox from "./components/CookieBox.jsx";
 import Cookies from "./components/Cookies.jsx";
 import Form from "./components/Form.jsx";
 import Footer from "./components/Footer.jsx";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [Cajas, setCajas] = useState();
+
+  useEffect(() => {
+    axios
+      .post("http://localhost:5000/api/ordenes/seleccionar-caja")
+      .then((response) => setCajas(response.data))
+      .catch((error) => console.error(error));
+  }, []);
+
   const cookiesInfo = [
     {
       nombre: "Coco & Chocolate Blanco",
@@ -36,7 +47,7 @@ function App() {
       nombre: "Chocolate Arequipe",
       cookiesImage: "/Krooky_Galleta Chocolate.png",
       cookiesDescription:
-        "¿Recuerdas cuando se te iluminaban los ojos alver un chocolate después del almuerzo? Así se siente cada pedacito de esta galleta,",
+        "¿Recuerdas cuando se te iluminaban los ojos alver un chocolate después del almuerzo? Así se siente cada pedacito de esta galleta",
     },
     {
       nombre: "Nutella",

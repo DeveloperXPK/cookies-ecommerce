@@ -96,7 +96,7 @@ function Direccion() {
         <input
           type="text"
           style={emailInputStyles}
-          class="form-control"
+          className="form-control"
           id="formGroupExampleInput"
           placeholder="¡Tu direccion aqui!"
         />
@@ -123,7 +123,7 @@ function ButtonSendOrder() {
         id="staticBackdrop"
         data-bs-backdrop="static"
         data-bs-keyboard="false"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="staticBackdropLabel"
         aria-hidden="true"
       >

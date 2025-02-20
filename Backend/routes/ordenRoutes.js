@@ -12,7 +12,6 @@ router.post("/seleccionar-caja", async (req, res) => {
   const nuevaOrden = new Orden({
     caja: cajaId,
     galletas: [],
-    total: caja.precio,
   });
 
   await nuevaOrden.save();
@@ -26,11 +25,9 @@ router.post("/agregar-galleta", async (req, res) => {
   if (!orden) return res.status(404).json({ error: "Orden no encontrada" });
 
   if (orden.galletas.length >= orden.caja.capacidad) {
-    return res
-      .status(400)
-      .json({
-        error: "¡No puedes agregar más galletas de las que permite la caja!",
-      });
+    return res.status(400).json({
+      error: "¡No puedes agregar más galletas de las que permite la caja!",
+    });
   }
 
   orden.galletas.push(galletaId);
